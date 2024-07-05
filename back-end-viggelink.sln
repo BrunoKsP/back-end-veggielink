@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8B2C7358-CFDF-480B-98EC-CD7070B0824B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeggieLink.Api", "src\api\VeggieLink.Api.csproj", "{53C02043-1150-4F86-87F5-C53ADA7C6CD3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeggieLink.Aplication", "src\aplication\VeggieLink.Aplication.csproj", "{BC68F074-8459-4DEA-A459-1C8C7626D9AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeggieLink.Data", "src\data\VeggieLink.Data.csproj", "{475F8653-30BB-41C2-AE4B-90B58F849C90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeggieLink.Infra", "src\infra\VeggieLink.Infra.csproj", "{3D8A8D9C-51FD-4870-9F80-73D4995D181B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeggieLink.CrossCutting.IoC", "src\CrossCutting.IoC\VeggieLink.CrossCutting.IoC.csproj", "{AA31DC94-3851-4756-BC95-0243799DBAB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53C02043-1150-4F86-87F5-C53ADA7C6CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C02043-1150-4F86-87F5-C53ADA7C6CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C02043-1150-4F86-87F5-C53ADA7C6CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C02043-1150-4F86-87F5-C53ADA7C6CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC68F074-8459-4DEA-A459-1C8C7626D9AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC68F074-8459-4DEA-A459-1C8C7626D9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC68F074-8459-4DEA-A459-1C8C7626D9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC68F074-8459-4DEA-A459-1C8C7626D9AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475F8653-30BB-41C2-AE4B-90B58F849C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475F8653-30BB-41C2-AE4B-90B58F849C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475F8653-30BB-41C2-AE4B-90B58F849C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475F8653-30BB-41C2-AE4B-90B58F849C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8A8D9C-51FD-4870-9F80-73D4995D181B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8A8D9C-51FD-4870-9F80-73D4995D181B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8A8D9C-51FD-4870-9F80-73D4995D181B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8A8D9C-51FD-4870-9F80-73D4995D181B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53C02043-1150-4F86-87F5-C53ADA7C6CD3} = {8B2C7358-CFDF-480B-98EC-CD7070B0824B}
+		{BC68F074-8459-4DEA-A459-1C8C7626D9AB} = {8B2C7358-CFDF-480B-98EC-CD7070B0824B}
+		{475F8653-30BB-41C2-AE4B-90B58F849C90} = {8B2C7358-CFDF-480B-98EC-CD7070B0824B}
+		{3D8A8D9C-51FD-4870-9F80-73D4995D181B} = {8B2C7358-CFDF-480B-98EC-CD7070B0824B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0091421C-BE8E-4A2D-9C1D-CBBF019446F3}
+	EndGlobalSection
+EndGlobal
