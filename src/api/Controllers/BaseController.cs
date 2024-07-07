@@ -1,6 +1,7 @@
+using System.Web.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers
+namespace VeggieLink.Api.Controllers
 {
     [ApiController]
     public class BaseController : ControllerBase
