@@ -1,11 +1,7 @@
 using data.domain.Collections;
 using data.domain.Context;
-using Humanizer;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using VeggieLink.Data.Collections;
-using VeggieLink.Infra.domain.Dtos;
 using VeggieLink.Infra.Interfaces;
 
 namespace VeggieLink.Infra.Repositories;
@@ -58,5 +54,10 @@ public class ProductRepository : IProductRepository
             .Set(p => p.Status, dto.Status);
 
         await _dataBase.UpdateOneAsync(filter, update);
+    }
+    public async Task<IList<ProductCollection>> GetProductCategory(string categoryId)
+    {
+        var filter = Builders<ProductCollection>.Filter.Eq(p => p.CategoryId, categoryId);
+        return await _dataBase.Find(filter).ToListAsync();
     }
 }
