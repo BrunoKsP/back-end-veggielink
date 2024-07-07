@@ -27,8 +27,8 @@ public class CategoryRepository : ICategoryRepository
         return await _dataBase.Find(filter).FirstOrDefaultAsync();
     }
    public async Task<List<CategoryCollection>> GetCategoriesById(List<string> ids)
-{
+    {
     var filter = Builders<CategoryCollection>.Filter.In(p => p.Id, ids);
     return await _dataBase.Find(filter).ToListAsync();
-}
+    }
 }

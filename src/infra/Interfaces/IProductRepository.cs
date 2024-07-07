@@ -10,5 +10,5 @@ public interface IProductRepository
     Task<ProductCollection> GetProduct(string id);
     Task UpdateStatus(string id);
     Task UpdateProduct(ProductCollection dto, string id);
-    //Task<List<ProductWithCategory>> GetProductsWithCategoriesAsync();
+    Task<IList<ProductCollection>> GetProductCategory(string categoryId);
 }

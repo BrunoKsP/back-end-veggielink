@@ -24,7 +24,7 @@ public class CategoryController : BaseController
         return Ok("Criado Com Sucesso");
     }
     [HttpGet]
-    public async Task<CategoryCollection> GetCategory([FromQuery] string id)
+    public async Task<CategoryDto> GetCategory([FromQuery] string id)
     {
         return await _service.GetCategory(id);
     }

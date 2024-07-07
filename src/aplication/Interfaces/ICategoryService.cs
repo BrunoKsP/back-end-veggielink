@@ -6,6 +6,6 @@ namespace VeggieLink.Aplication.Interfaces;
 public interface ICategoryService
 {
     Task Create(CreateCategoryDto dto);
-    Task<CategoryCollection> GetCategory(string id);
+    Task<CategoryDto> GetCategory(string id);
     Task<IList<CategoryCollection>> GetAllCategorys();
 }
