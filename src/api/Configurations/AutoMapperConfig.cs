@@ -1,4 +1,4 @@
-using VeggieLink.Aplication.AutoMapper;
+using aplication.AutoMapper;
 
 namespace VeggieLink.Api.Configurations;
 

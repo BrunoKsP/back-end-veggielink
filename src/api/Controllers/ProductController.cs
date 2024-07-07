@@ -1,9 +1,9 @@
-using api.Controllers;
 using aplication.Dtos.Products;
-using aplication.Services;
+using data.domain.Collections;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VeggieLink.Aplication.Dtos.Products;
+using VeggieLink.Aplication.Interfaces;
 
 namespace VeggieLink.Api.Controllers
 {
@@ -30,7 +30,7 @@ namespace VeggieLink.Api.Controllers
 
         }
         [HttpGet]
-        public async Task<ListProductDto> GetProduct([FromQuery] string id)
+        public async Task<ProductCollection> GetProduct([FromQuery] string id)
         {
             return await _service.GetProduct(id);
         }

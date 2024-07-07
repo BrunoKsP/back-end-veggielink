@@ -5,7 +5,7 @@ using VeggieLink.Aplication.Dtos.Category;
 using VeggieLink.Aplication.Dtos.User;
 using VeggieLink.Data.Collections;
 
-namespace VeggieLink.Aplication.AutoMapper;
+namespace aplication.AutoMapper;
 
 public class DtoToDomainMapping : Profile
 {

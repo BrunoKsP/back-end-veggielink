@@ -1,5 +1,6 @@
 using data.domain.Collections;
 using data.domain.Context;
+using Humanizer;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
@@ -49,13 +50,13 @@ public class ProductRepository : IProductRepository
             .Set(p => p.Description, dto.Description)
             .Set(p => p.PlantingDate, dto.PlantingDate)
             .Set(p => p.HarverstDate, dto.HarverstDate)
+            .Set(p => p.PreparingDate, dto.PreparingDate)
+            .Set(p => p.CategoryId, dto.CategoryId)
+            .Set(p => p.Fertilizer, dto.Fertilizer)
+            .Set(p => p.Observation, dto.Observation)
+            .Set(p => p.Thumb, dto.Thumb)
             .Set(p => p.Status, dto.Status);
 
         await _dataBase.UpdateOneAsync(filter, update);
-    }
-    public async Task<IList<ProductCollection>> GetProductCategory(string categoryId)
-    {
-        var filter = Builders<ProductCollection>.Filter.Eq(p => p.CategoryId, categoryId);
-        return await _dataBase.Find(filter).ToListAsync();
     }
 }

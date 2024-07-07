@@ -1,7 +1,7 @@
 using AutoMapper;
 using Microsoft.Extensions.Configuration;
 
-namespace VeggieLink.Aplication.AutoMapper;
+namespace aplication.AutoMapper;
 
 public class AutoMapperSetup
 {

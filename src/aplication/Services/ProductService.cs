@@ -1,12 +1,15 @@
 using aplication.Dtos.Products;
 using aplication.Exceptions;
+using aplication.Services;
 using AutoMapper;
 using data.domain.Collections;
+using Microsoft.IdentityModel.Tokens;
 using VeggieLink.Aplication.Dtos.Products;
+using VeggieLink.Aplication.Interfaces;
 using VeggieLink.Aplication.Validators.ProductValidator;
 using VeggieLink.Infra.Interfaces;
 
-namespace aplication.Services;
+namespace VeggieLink.Aplication.Services;
 
 public class ProductService : BaseService, IProductService
 {
@@ -59,11 +62,11 @@ public class ProductService : BaseService, IProductService
         return groupedProducts;
     }
 
-    public async Task<ListProductDto> GetProduct(string id)
+    public async Task<ProductCollection> GetProduct(string id)
     {
         var product = await _repository.GetProduct(id) ?? throw CustomException.EntityNotFound(new { error = "Produto não encontrado" });
 
-        return _mapper.Map<ListProductDto>(product);
+        return _mapper.Map<ProductCollection>(product);
     }
     public async Task ChangeProduct(ChangeProductDto dto, string id)
     {
@@ -77,11 +80,11 @@ public class ProductService : BaseService, IProductService
             PlantingDate = dto.PlantingDate,
             PreparingDate = dto.PreparingDate,
             HarverstDate = dto.HarverstDate,
+            Observation = dto.Observation,
+            Fertilizer = dto.Fertilizer,
+            CategoryId = string.IsNullOrEmpty(dto.CategoryId) ? product.CategoryId : dto.CategoryId,
             Status = dto.Status,
             Thumb = dto.Thumb,
-            Fertilizer = dto.Fertilizer,
-            Observation = dto.Observation,
-            CategoryId = dto.CategoryId
         };
         await _repository.UpdateProduct(newproduct, id);
     }

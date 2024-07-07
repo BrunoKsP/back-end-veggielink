@@ -1,4 +1,3 @@
-using aplication.Services;
 using data.domain.Context;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
